@@ -74,6 +74,7 @@ struct ContentView: View {
                 // MARK: Grand Total Amount = checkAmount + tipAmount
                 Section {
                     Text(grandTotalAmount, format: .currency(code: currencyCalculator))
+                        .foregroundStyle((tipPercentage == 0) ? .red : .black)
                 } header: {
                     Text("Grand total amount")
                 }
